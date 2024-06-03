@@ -1,4 +1,5 @@
 <script>
+import axios from 'axios'; 
 import CharacterCard from "../components/CharacterCard.vue";
 
 
@@ -12,7 +13,7 @@ export default {
             base_api_url: 'http://127.0.0.1:8000',
             base_characters_url: '/api/characters',
             characters: [
-                { name: 'pippo' }, { name: 'pluto' }, { name: 'paperino' }
+                
             ],
             //loading: true
         }
@@ -38,8 +39,8 @@ export default {
     },
 
     mounted() {
-        let url = this.base_api_url + this.characters
-        //this.callAPI(url);
+        let url = this.base_api_url + this.base_characters_url
+        this.callAPI(url);
     }
 }
 
@@ -52,7 +53,7 @@ export default {
         <h2 class="text-center m-5">Characters List</h2>
         <div class="container">
             <div class="row g-4">
-                <CharacterCard :character="character" v-for="character in characters/* .data */"></CharacterCard>
+                <CharacterCard :character="character" v-for="character in characters.data"></CharacterCard>
             </div>
         </div>
 
