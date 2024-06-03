@@ -8,9 +8,9 @@ export default {
 
 <template>
     <main class="">
-            <div class="">
-                RPG GENERATOR BLOG
-            </div>
+        <div class="">
+            RPG GENERATOR BLOG
+        </div>
     </main>
 </template>
 

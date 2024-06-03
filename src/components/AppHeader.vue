@@ -7,18 +7,17 @@ export default {
 </script>
 
 <template>
-  <div class="links d-flex justify-content-end">
-    <nav class="navbar bg-transparent">
-      <form class="container-fluid justify-content-end bg-transparent">
-        <RouterLink class="btn border-0 btn-sm btn-outline-secondary bg-none text-decoration-none"
-          :to="{ name: 'home' }">Home
-        </RouterLink>
-        <RouterLink class="btn border-0  btn-sm btn-outline-secondary bg-none text-decoration-none"
-          :to="{ name: 'blog' }">Blog
-        </RouterLink>
-      </form>
-    </nav>
-  </div>
+  <nav class="bg-primary">
+    <form class="container justify-content-end bg-primary">
+      <RouterLink class="btn  btn-outline-dark border-0" :to="{ name: 'home' }">
+        Home
+      </RouterLink>
+      <RouterLink class="btn  btn-outline-dark border-0" :to="{ name: 'blog' }">Blog
+      </RouterLink>
+      <RouterLink class="btn btn-outline-dark border-0" :to="{ name: 'characters' }">Characters
+      </RouterLink>
+    </form>
+  </nav>
 </template>
 
 <style scoped>
