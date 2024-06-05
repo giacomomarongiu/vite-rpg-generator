@@ -7,10 +7,10 @@ export default {
 </script>
 
 <template>
-  <nav class="bg-primary">
-    <form class="container justify-content-end bg-primary">
+  <nav class="bg-light">
+    <form class="container justify-content-end bg-light">
       <RouterLink class="btn  btn-outline-dark border-0" :to="{ name: 'home' }">
-        Home
+        <img src="/public/logo.png" width="250px" alt="">
       </RouterLink>
       <RouterLink class="btn  btn-outline-dark border-0" :to="{ name: 'blog' }">Blog
       </RouterLink>
@@ -20,6 +20,4 @@ export default {
   </nav>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

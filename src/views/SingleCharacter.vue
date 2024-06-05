@@ -47,14 +47,14 @@ export default {
 </script>
 
 <template> <!-- {{ $route.params.slug }} -->
-    <div class="container">
+    <div class="container min-vh-100">
         <div class="row">
-            <div class="col-12" v-if="character">
-                <div class="card">
+            <div class="col-12 my-4" v-if="character">
+                <div class="card bg-dark bg-opacity-50 border-danger">
                     <img class="card-img-top" src="" alt="" />
-                    <div class="card-body">
+                    <div class="card-body text-white">
                         <h4 class="card-title">{{ character.name }}</h4>
-                        <h6 class="card-subtitle mb-2 text-muted "><span class="fw-bold">Type: </span>{{
+                        <h6 class="card-subtitle mb-2"><span class="fw-bold">Type: </span>{{
                             character.type.name }}
                         </h6>
                         <p class="card-text"><span class="fw-bold">Description: </span>{{ character.description }}</p>
