@@ -7,10 +7,10 @@ export default {
 
 
 <template>
-    <main class="">
-            <div class="">
-                RPG GENERATOR HOME
-            </div>
+    <main class="min-vh-100">
+        <div class=" text-center text-light">
+            RPG GENERATOR HOME
+        </div>
     </main>
 </template>
 

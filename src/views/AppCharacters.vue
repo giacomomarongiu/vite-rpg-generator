@@ -48,7 +48,7 @@ export default {
 </script>
 
 <template>
-    <main class="my-5">
+    <main class="my-5 min-vh-100">
         <h2 class="text-center m-5 text-white">Characters List</h2>
         <div class="container">
             <div class="row g-4">

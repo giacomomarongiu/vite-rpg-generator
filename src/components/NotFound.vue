@@ -6,8 +6,8 @@
 </script>
 
 <template>
-    <div>
-<h1>NOT FOUND</h1>
+    <div class="min-vh-100">
+        <h1 class="text-center text-light">NOT FOUND</h1>
     </div>
 </template>
 

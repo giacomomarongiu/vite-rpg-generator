@@ -7,8 +7,8 @@ export default {
 
 
 <template>
-    <main class="">
-        <div class="">
+    <main class="min-vh-100">
+        <div class="text-center text-light">
             RPG GENERATOR BLOG
         </div>
     </main>
