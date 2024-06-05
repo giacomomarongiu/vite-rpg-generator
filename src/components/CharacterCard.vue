@@ -8,9 +8,12 @@ export default {
     },
     data() {
         return {
-
+            base_api_url: 'http://127.0.0.1:8000',
         }
     },
+    mounted() {
+        console.log(this.character);
+    }
 }
 
 </script>
@@ -20,12 +23,12 @@ export default {
         <RouterLink class="text-decoration-none" :to="{ name: 'singleCharacter', params: { slug: character.slug } }">
             <div class="card bg-dark bg-opacity-50 border-danger rounded-3 h-100">
 
+                <img :src="base_api_url + '/storage/' + character.image" alt="">
+
                 <div class="card-body text-white">
                     <h5 class="card-title"><span class="fw-bold">Name: </span>{{ character.name }}</h5>
-                    <h6 class="card-subtitle mb-2"><span class="fw-bold">Type: </span>{{ character.type.name
-                        }}
-                    </h6>
-                    <p class="card-text"><span class="fw-bold">Description: </span>{{ character.description }}</p>
+                    <h6 class="card-subtitle mb-2"><span class="fw-bold">Type: </span>{{ character.type !== null ?
+                        character.type.name : '' }}</h6>
                     <p class="card-text"><span class="fw-bold">Attack: </span>{{ character.attack }}</p>
                     <p class="card-text"><span class="fw-bold">Defense: </span>{{ character.defense }}</p>
                     <p class="card-text"><span class="fw-bold">Speed: </span>{{ character.speed }}</p>
@@ -47,6 +50,7 @@ export default {
 .card {
     box-shadow: 5px 5px rgba(133, 133, 133, 0.167);
     transition: 1s;
+    text-align: center;
 
 
     & :hover {

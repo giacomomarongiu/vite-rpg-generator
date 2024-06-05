@@ -51,13 +51,10 @@ export default {
         <div class="row">
             <div class="col-12 my-4" v-if="character">
                 <div class="card bg-dark bg-opacity-50 border-danger">
-                    <img class="card-img-top" src="" alt="" />
+                    <img class="card-img-top" :src="base_api_url + '/storage/' + character.image" alt="" />
                     <div class="card-body text-white">
                         <h4 class="card-title">{{ character.name }}</h4>
-                        <h6 class="card-subtitle mb-2"><span class="fw-bold">Type: </span>{{
-                            character.type.name }}
-                        </h6>
-                        <p class="card-text"><span class="fw-bold">Description: </span>{{ character.description }}</p>
+                        <h6 class="card-subtitle mb-2"><span class="fw-bold">Type: </span>{{ character.type.name }}</h6>
                         <p class="card-text"><span class="fw-bold">Attack: </span>{{ character.attack }}</p>
                         <p class="card-text"><span class="fw-bold">Defense: </span>{{ character.defense }}</p>
                         <p class="card-text"><span class="fw-bold">Speed: </span>{{ character.speed }}</p>

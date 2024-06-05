@@ -1,5 +1,5 @@
 <script>
-import axios from 'axios'; 
+import axios from 'axios';
 import CharacterCard from "../components/CharacterCard.vue";
 
 
@@ -13,7 +13,7 @@ export default {
             base_api_url: 'http://127.0.0.1:8000',
             base_characters_url: '/api/characters',
             characters: [
-                
+
             ],
             //loading: true
         }
@@ -60,4 +60,4 @@ export default {
     </main>
 </template>
 
-<style ></style>
+<style></style>
