@@ -54,8 +54,8 @@ export default {
                 <div class="card align-items-center bg-dark bg-opacity-50 border-danger">
                     <img class="card-img-top" :src="base_api_url + '/storage/' + character.image" alt="" />
                     <div class="card-body h-100 text-white bg-opacity-50 border-danger">
-                        <h4 class="card-title pb-3">{{ character.name }}</h4>
-                        <h6 class="card-subtitle mb-2"><span class="fw-bold">Type: </span>
+                        <h4 class="card-title pb-3 text-center">{{ character.name }}</h4>
+                        <h6 class="card-subtitle py-2 mb-2"><span class="fw-bold">Type: </span>
                             <RouterLink class="text-decoration-none"
                                 :to="{ name: 'singleType', params: { slug: character.type.slug } }">
                                 {{ character.type.name }}
@@ -65,14 +65,19 @@ export default {
                         <p class="card-text"><span class="fw-bold">Defense: </span>{{ character.defense }}</p>
                         <p class="card-text"><span class="fw-bold">Speed: </span>{{ character.speed }}</p>
 
-                        <p class="card-text"><span class="fw-bold">Item: </span>
-                            <template v-for="item in character.items">
-                                <RouterLink class="text-decoration-none fw-bold"
-                                    :to="{ name: 'singleItem', params: { slug: item.slug } }">
-                                    {{ item.name }}
-                                </RouterLink>
+                        <p class="card-text mw-100"><span class="fw-bold">Item: </span>
+                            <template v-if="character.items.length !== 0">
+                                <span v-for="(item, index) in character.items">
+                                    <RouterLink class="text-decoration-none fw-bold"
+                                        :to="{ name: 'singleItem', params: { slug: item.slug } }">
+                                        {{ item.name }}
+                                    </RouterLink>
+                                    <span v-if="index !== character.items.length - 1"> - </span>
+
+                                </span>
                             </template>
                         </p>
+
                     </div>
                 </div>
 

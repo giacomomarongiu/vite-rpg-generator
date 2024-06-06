@@ -16,9 +16,11 @@ export default {
                     like the one in previous versions of Bootstrap. Check out the
                     examples below for how you can remix and restyle it to your liking.
                 </p>
-                <button class="btn btn-warning btn-lg fw-bold" type="button">
-                    Go to HELL
-                </button>
+
+                <RouterLink class="btn btn-warning btn-lg fw-bold" :to="{ name: 'hell' }">Go to HELL
+                </RouterLink>
+
+
             </div>
         </div>
 

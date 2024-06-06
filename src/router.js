@@ -1,7 +1,7 @@
 import { createWebHistory, createRouter } from 'vue-router'
 
 import AppHome from './views/AppHome.vue'
-import AppBlog from './views/AppBlog.vue'
+import AppHell from './views/AppHell.vue'
 import AppCharacters from './views/AppCharacters.vue'
 import SingleCharacter from './views/SingleCharacter.vue'
 import SingleItem from './views/SingleItem.vue'
@@ -17,9 +17,9 @@ const router = createRouter({
             component: AppHome
         },
         {
-            path: '/blog',
-            name: 'blog',
-            component: AppBlog
+            path: '/hell',
+            name: 'hell',
+            component: AppHell
         },
         {
             path: '/characters',
