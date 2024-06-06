@@ -12,7 +12,7 @@ export default {
         }
     },
     mounted() {
-        console.log(this.character);
+        // console.log(this.character);
     }
 }
 

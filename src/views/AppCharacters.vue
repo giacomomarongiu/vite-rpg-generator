@@ -28,7 +28,7 @@ export default {
             axios
                 .get(url)
                 .then(response => {
-                    console.log(response);
+                    // console.log(response);
                     this.characters = response.data.characters
                     //console.log(response.data.characters);
                 })

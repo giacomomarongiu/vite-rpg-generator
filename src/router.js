@@ -4,6 +4,8 @@ import AppHome from './views/AppHome.vue'
 import AppBlog from './views/AppBlog.vue'
 import AppCharacters from './views/AppCharacters.vue'
 import SingleCharacter from './views/SingleCharacter.vue'
+import SingleItem from './views/SingleItem.vue'
+import SingleType from './views/SingleType.vue'
 import NotFound from './components/NotFound.vue'
 
 const router = createRouter({
@@ -30,11 +32,21 @@ const router = createRouter({
             component: SingleCharacter
         },
         {
+            path: '/items/:slug',
+            name: 'singleItem',
+            component: SingleItem
+        },
+        {
+            path: '/types/:slug',
+            name: 'singleType',
+            component: SingleType
+        },
+        {
             path: '/:pathMatch(.*)*',
             name: 'NotFound',
             component: NotFound
         },
-        
+
     ]
 })
 
