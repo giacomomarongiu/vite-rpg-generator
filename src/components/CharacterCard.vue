@@ -19,16 +19,16 @@ export default {
 </script>
 
 <template>
-    <div class="col-6" v-if="character">
+    <div class="col-4" v-if="character">
         <RouterLink class="text-decoration-none" :to="{ name: 'singleCharacter', params: { slug: character.slug } }">
             <div class="card bg-dark bg-opacity-50 border-danger rounded-3 h-100">
 
-                <img :src="base_api_url + '/storage/' + character.image" alt="">
+                <img class="card-img-top" :src="base_api_url + '/storage/' + character.image" alt="">
 
                 <div class="card-body text-white">
                     <h5 class="card-title"><span class="fw-bold">Name: </span>{{ character.name }}</h5>
                     <h6 class="card-subtitle mb-2"><span class="fw-bold">Type: </span>{{ character.type !== null ?
-                        character.type.name : '' }}</h6>
+        character.type.name : '' }}</h6>
                     <p class="card-text"><span class="fw-bold">Attack: </span>{{ character.attack }}</p>
                     <p class="card-text"><span class="fw-bold">Defense: </span>{{ character.defense }}</p>
                     <p class="card-text"><span class="fw-bold">Speed: </span>{{ character.speed }}</p>
@@ -39,7 +39,7 @@ export default {
     </div>
 </template>
 
-<style>
+<style scoped>
 /* div.card_bg {
     background-color: hsla(0, 0%, 100%, 0.2) !important;
     -webkit-backdrop-filter: blur(5px) !important;
@@ -52,6 +52,10 @@ export default {
     transition: 1s;
     text-align: center;
 
+    & img {
+        object-fit: cover;
+        aspect-ratio: 1;
+    }
 
     & :hover {
         background-color: black;

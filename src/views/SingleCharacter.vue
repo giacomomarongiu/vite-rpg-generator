@@ -49,12 +49,12 @@ export default {
 
 <template> <!-- {{ $route.params.slug }} -->
     <div class="container min-vh-100">
-        <div class="row">
-            <div class="col-12 my-4" v-if="character">
-                <div class="card bg-dark bg-opacity-50 border-danger">
+        <div class="row py-4">
+            <div class="col-6 mx-auto my-4" v-if="character">
+                <div class="card align-items-center bg-dark bg-opacity-50 border-danger">
                     <img class="card-img-top" :src="base_api_url + '/storage/' + character.image" alt="" />
-                    <div class="card-body text-white">
-                        <h4 class="card-title">{{ character.name }}</h4>
+                    <div class="card-body h-100 text-white bg-opacity-50 border-danger">
+                        <h4 class="card-title pb-3">{{ character.name }}</h4>
                         <h6 class="card-subtitle mb-2"><span class="fw-bold">Type: </span>
                             <RouterLink class="text-decoration-none"
                                 :to="{ name: 'singleType', params: { slug: character.type.slug } }">
@@ -67,7 +67,7 @@ export default {
 
                         <p class="card-text"><span class="fw-bold">Item: </span>
                             <template v-for="item in character.items">
-                                <RouterLink class="text-decoration-none"
+                                <RouterLink class="text-decoration-none fw-bold"
                                     :to="{ name: 'singleItem', params: { slug: item.slug } }">
                                     {{ item.name }}
                                 </RouterLink>
@@ -81,4 +81,15 @@ export default {
     </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.card {
+    & a {
+        color: darkorange;
+    }
+
+    & img {
+        object-fit: cover;
+        aspect-ratio: 1;
+    }
+}
+</style>
